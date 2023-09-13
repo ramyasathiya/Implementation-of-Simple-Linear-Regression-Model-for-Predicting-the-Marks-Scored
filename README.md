@@ -18,58 +18,61 @@ To write a program to predict the marks scored by a student using the simple lin
 /*
 Program to implement the simple linear regression model for predicting the marks scored.
 Developed by: JEEVITHA S
-RegisterNumber:  212222100016
+RegisterNumber: 212222100016  
 */
-# implement a simple regression model for predicting the marks scored by the students
-
 import pandas as pd
 import numpy as np
-dataset=pd.read_csv('/content/student_scores.csv')
-print(dataset)
-
-# assigning hours to X & Scores to Y
-X=dataset.iloc[:,:1].values
-Y=dataset.iloc[:,1].values
-print(X)
-print(Y)
-
-from sklearn.model_selection import train_test_split
-X_train,X_test,Y_train,Y_test=train_test_split(X,Y,test_size=1/3,random_state=0)
-
-from sklearn.linear_model import LinearRegression
-reg=LinearRegression()
-reg.fit(X_train,Y_train)
-
-Y_pred=reg.predict(X_test)
 import matplotlib.pyplot as plt
 from sklearn.metrics import mean_absolute_error,mean_squared_error
+df=pd.read_csv('student_scores.csv')
+df.head()
 
-plt.scatter(X_train,Y_train,color='green')
-plt.plot(X_train,reg.predict(X_train),color='red')
-plt.title('Training set (H vs S)')
-plt.xlabel("Hours")
-plt.ylabel("Scores")
-plt.show
+df.tail()
 
-plt.scatter(X_test,Y_test,color='purple')
-plt.plot(X_test,reg.predict(X_test),color='blue')
-plt.title('Test set(H vs S)')
+x=df.iloc[:,:-1].values
+x
+
+y=df.iloc[:,1].values
+y
+
+# splitting train and test data
+from sklearn.model_selection import train_test_split
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=1/3,random_state=0)
+
+from sklearn.linear_model import LinearRegression
+regressor=LinearRegression()
+regressor.fit(x_train,y_train)
+y_pred=regressor.predict(x_test)
+
+# displaying predicted values
+y_pred
+
+plt.scatter(x_train,y_train,color='brown')
+plt.plot(x_train,regressor.predict(x_train),color='green')
+plt.title("Hours vs Scores (Training Set)")
 plt.xlabel("Hours")
 plt.ylabel("Scores")
 plt.show()
 
-mse=mean_squared_error(Y_test,Y_pred)
-print('MSE = ',mse)
+plt.scatter(x_test,y_test,color='purple')
+plt.plot(x_test,regressor.predict(x_test),color='red')
+plt.title("Hours vs Scores (Test Set)")
+plt.xlabel("Hours")
+plt.ylabel("Scores")
+plt.show()
 
-mae=mean_absolute_error(Y_test,Y_pred)
-print('MAE = ',mae)
+mse=mean_squared_error(y_test,y_pred)
+print("MSE= ",mse)
+
+mae=mean_absolute_error(y_test,y_pred)
+print("MAE= ",mae)
 
 rmse=np.sqrt(mse)
-print("RMSE = ",rmse)
-*/
-```
+print("RMSE= ",rmse)
+
 
 ## Output:
+  ##df.head()
 ![simple linear regression model for predicting the marks scored](sam.png)
 ![200177597-e6ff825e-710a-40ec-842d-50233234b4d3](https://github.com/Jeevithha/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/123623197/a784dc70-2996-4b0d-a946-41017f61d1ea)
 

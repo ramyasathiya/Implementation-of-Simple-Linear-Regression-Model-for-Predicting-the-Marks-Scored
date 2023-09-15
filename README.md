@@ -71,51 +71,51 @@ rmse=np.sqrt(mse)
 print("RMSE= ",rmse)
 ```
 
-## Output:
-#df.head()
+Output:
+df.head()
 
 ![image](https://github.com/Jeevithha/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/123623197/e6660457-7c4e-46c9-914a-ab287232f32c)
 
-#df.tail()
+df.tail()
 
 ![image](https://github.com/Jeevithha/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/123623197/82a6c704-534c-48d3-930c-e6ba4724613d)
 
 
-##Array value of X
+Array value of X
 
 ![image](https://github.com/Jeevithha/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/123623197/d1b0480e-0a5c-4011-b0eb-b80198decce6)
 
 
-###Array value of Y
+Array value of Y
 
 ![image](https://github.com/Jeevithha/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/123623197/63b418ad-fa05-45c8-a696-dfaeb71db6c8)
 
 
-###Values of Y prediction
+Values of Y prediction
 
 ![image](https://github.com/Jeevithha/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/123623197/0303b5d2-ae86-4f13-b755-323de3d3ce7e)
 
 
-###Array values of Y test
+Array values of Y test
 
 ![image](https://github.com/Jeevithha/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/123623197/31b3e922-9142-4d0b-acab-55f880473428)
 
 
-###Training Set Graph
+Training Set Graph
 
 ![image](https://github.com/Jeevithha/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/123623197/ff8d3c4b-0043-4a0e-8b24-b532c0cd40d0)
 
 
-###Test Set Graph
+Test Set Graph
 
 ![image](https://github.com/Jeevithha/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/123623197/1021b83d-20fc-4374-bb3e-55c8ad607c66)
 
-###Values of MSE, MAE and RMSE
+Values of MSE, MAE and RMSE
 
 ![image](https://github.com/Jeevithha/Implementation-of-Simple-Linear-Regression-Model-for-Predicting-the-Marks-Scored/assets/123623197/d629eb9b-e832-444d-bc19-969b152cb04c)
 
 
 
-###Result:
+Result:
 
 Thus the program to implement the simple linear regression model for predicting the marks scored is written and verified using python programming.
